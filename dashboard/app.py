@@ -8,7 +8,7 @@ import docx
 
 load_dotenv()
 
-GROQ_API_KEY = "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"
+client = Groq(api_key=st.secrets.get("GROQ_API_KEY", os.getenv("GROQ_API_KEY")))
 
 st.set_page_config(page_title="AI Resume Analyzer", page_icon="📄", layout="centered")
 st.title("📄 AI Resume Analyzer")
